@@ -1,0 +1,21 @@
+version: '2'
+services:
+
+  backend:
+    extends:
+      file: docker-compose.yml
+      service: backend
+
+  mysql56:
+    extends:
+      file: docker-compose.yml
+      service: mysql56
+
+  test:
+    image: $IMAGE_TEST
+    volumes:
+      - ./app/tests/e2e:/app/e2e
+    depends_on:
+       - mysql56
+       - backend
+    command: "/tmp/wait-for-it.sh mysql56:3306 -t 50 -- /app/runtest.sh"

@@ -1,0 +1,6 @@
+- prefix: '/v1/users'
+- routes:
+  - /doc: src.users.infrastructure.framework.handlers.doc.ProjectDocumentationHandler
+  - /: src.users.infrastructure.framework.handlers.user.UserHandler
+  - /{id}: src.users.infrastructure.framework.handlers.user.UserIdHandler
+

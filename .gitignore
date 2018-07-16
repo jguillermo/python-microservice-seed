@@ -1,0 +1,9 @@
+logs/
+*__pycache__/
+*Pipfile.lock
+*.vscode/
+*.xz
+*.idea/
+*env/
+*nosetests.xml
+docker/data/*
