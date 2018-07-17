@@ -2,7 +2,7 @@
 
 ## GENERAL ##
 OWNER 			= utp
-SERVICE_NAME 	= base
+SERVICE_NAME 	= flash
 PATH_PREFIX 	= "/v1"
 
 ## DEPLOY ##
@@ -59,9 +59,6 @@ tests: ## Run the unitTests
 
 tests-e2e: ## Run the end to end Tests
 	docker-compose -f docker-compose.test.yml run --rm test
-
-login-aws-dev: ## Run the end to end Tests
-	aws ecr get-login --no-include-email --region eu-west-1 | sh
 
 ## Migrate ##
 migrate: ## Execute migrate

@@ -1,24 +1,25 @@
-MicroService Base
------------------
+# flash-api
+
+Services in Back-end
+---------------------
 
 ```
-git clone git@bitbucket.org:orbisunt/aptitus-microservice-base.git
+git clone git@gitlab.com:lacafetalab/flash-api.git
 ```
 
-1 cambiar el nombre al proyecto, make file line:5
+
+construir la imagen docker
 ```
-SERVICE_NAME 	= base 
-```
-```
-SERVICE_NAME 	= otro_nombre 
+make build
 ```
 
-iniciar el proyecto
+Iniciar el proyecto,
+abrir el navegador o postmant : [http://localhost:8080/v1/users/doc](http://localhost:8080/v1/users/doc)  
 ```
-make up
+make start
 ```
 
-log
+Mostrar los log
 ```
 make log
 ```
@@ -31,4 +32,9 @@ make tests
 test e2e
 ```
 make tests-e2e
+```
+
+Apagar los servicios
+```
+make down
 ```
